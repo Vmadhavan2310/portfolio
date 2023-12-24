@@ -22,6 +22,11 @@
     flex-basis: 45%;
     display: flex;
     justify-content: center;
+    align-items: center;
+    column-gap: 1rem;
+}
+.header-title + span{
+    display: flex;
 }
 .nav-wrapper{
     display: flex;
@@ -35,6 +40,7 @@
     justify-content: center;
     align-items: center;
     row-gap: 2rem;
+    width: 70%;
 }
 .banner-header{
     font-size: calc(18px + (54 - 18) * ((100vw - 375px) / (1440 - 375)));
@@ -42,8 +48,9 @@
 }
 .banner-para{
     font-family: var(--primary-font);
+    min-height: 60px;
 }
-.banner-header,.banner-para{
+.banner-para{
     width: 50%;
 }
 .typing-txt{
@@ -55,4 +62,21 @@
     font-size: 1.5rem;
     position: relative;
     top: 5%;
+    font-weight: 900;
+}
+.banner-btns{
+    display: flex;
+    gap: 20px;
+    width: 50%;
+}
+.banner-btns button{
+    background: #ffb805;
+    padding: 0.5rem 1.5rem;
+    border-radius: 10px;
+}
+
+/* remove */
+.about-container div,.about-container p{
+    color: #000 !important;
+    height: 500px;
 }

@@ -1,0 +1,19 @@
+/* .about-container:before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 0;
+    height: 0;
+    border: 25px solid transparent;
+    border-top: 25px solid #454545;
+    transform: translateX(-50%);
+}
+.about-container{
+    background-color: antiquewhite;
+    height: 500px;
+    position: relative;
+}
+.container-wrapper{
+    padding: 6rem 1rem;
+} */

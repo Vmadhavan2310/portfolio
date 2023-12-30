@@ -1,15 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Raleway:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Raleway:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Merienda:wght@300;400;500;600;700;800;900&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Raleway:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 :root{
   --text-clr:#fff;
+  --text-primary-clr:#454545;
   --primary-clr: #88bdbc;
   --secondary-clr: #254e58;
 
   /* --primary-font: 'Poppins', sans-serif; */
   --primary-font:'Libre Baskerville', serif;
-  --secondary-font: 'Raleway', sans-serif;
+  /* --secondary-font: 'Raleway', sans-serif; */
+  --secondary-font: 'Merienda', cursive;
 }
 
 *{
@@ -20,8 +23,8 @@
   outline: none;
   scroll-behavior: smooth;
   scroll-snap-type: mandatory;
-  font-family: var(--primary-font);
-  color: var(--text-clr);
+  font-family: var(--secondary-font);
+  color: inherit;
   list-style-type: none;
 }
 body{

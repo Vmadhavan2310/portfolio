@@ -6,8 +6,7 @@ function Header() {
   const header=React.useRef<HTMLElement | null>(null); //Use ref for Header Element access
   const logo_image_url='https://ik.imagekit.io/hs4gfzmpd/vm-high-resolution-logo-transparent%20(1).png?updatedAt=1703513209656';
   const sticky_logo_url='https://ik.imagekit.io/hs4gfzmpd/vm-high-resolution-logo-black-transparent.png?updatedAt=1703513209656';
-  let str = `I am  a web developer from Cape Breton, Nova Scotia and currently living in New York. I enjoy building everything
-  from small business sites to rich interactive web apps.`;
+  let str = `A Passionate Web Developer, turning ideas into real life Products. Oppurtunities don't happen until we create them!!`;
 
   function type_text(mode: string, duration: number) {
     let i = 0;
@@ -98,9 +97,9 @@ function Header() {
             <li className="toggle-btn" onClick={() => setbgmode(mode => (!mode))} ref={toggleBtn}></li>
           </nav>
         </header>
-        <main className="main-wrapper" data-aos='fade-up' data-aos-duration="2000">
-          <section className="main-content-wrapper">
-            <h3 className="banner-header">Websites done right.</h3>
+        <main className="main-wrapper">
+          <section className="main-content-wrapper" data-aos='fade-up' data-aos-duration="2000">
+            <h3 className="banner-header">React JS Developer</h3>
             <p className="banner-para">
               <span className="typing-txt" ref={typing_txt}></span>
             </p>
@@ -119,9 +118,13 @@ function Header() {
             </div>
           </section>
         </main>
-
+        <div className="down-arrow bounce">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25" height="25" width="25"><path d="M12.5 18 2 7.707 2.707 7l9.793 9.586L22.293 7l.707.707L12.5 18z" stroke='#fff'></path></svg>
+        </div>
       </section>
       </section>
+      <div className="separator">
+      </div>
     </section>
   )
 }

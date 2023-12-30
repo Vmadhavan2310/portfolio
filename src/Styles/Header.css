@@ -6,13 +6,16 @@
     height: 98vh;
     object-fit: contain;
     background-size: cover;
-    box-shadow: 0px 4px 4px 0px #00000040, inset 0 0 0 1000px rgba(0,0,0,60%);
+    box-shadow: 0px 0px 4px 0px #00000040, inset 0 0 0 1000px rgba(0,0,0,60%);
     transition: 1s all;
+    background-attachment: fixed;
 }
 .banner-bg-tile{
     background: url(https://cyberdudenetworks.com/assets/img/assets/gridtile.png);
     height: 100%;
     width: 100%;
+    position: relative;
+    background-attachment: fixed;
 }
 .banner-bg-image.active{
     box-shadow: 0px 4px 4px 0px #00000040, inset 0 0 0 1000px rgba(0,0,0,80%);
@@ -37,12 +40,13 @@
 .header-title:first-child{
     display: flex;
 }
-.logo-designation{
-    font-size: 0.75rem;
-    margin: 2px;
-}
 .logo-wrapper span{
     font-family: var(--primary-font);
+}
+.logo-wrapper span.logo-designation{
+    font-size: 0.75rem;
+    margin: 2px;
+    font-family: var(--secondary-font);
 }
 .nav-wrapper{
     display: flex;
@@ -118,6 +122,7 @@ left: 0;
 .banner-para{
     width: 60%;
     margin: 1.5rem 0;
+    padding: 0 1.5rem;
 }
 .typing-txt{
     text-transform: capitalize;
@@ -191,3 +196,56 @@ left: 0;
 .header-container.sticky .toggle-btn{
     border:0.5px solid var(--text-primary-clr)
 }
+.separator{
+    transform: translateY(0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.separator:before, .separator:after {
+    content: "";
+    display: block;
+    position: absolute;
+    bottom: 100%;
+    z-index: 199;
+    height: 0;
+    width: 50%;
+    border-bottom: 25px solid;
+}
+.separator:before{
+    border-right: 20px solid transparent;
+    left: 0;
+}
+.separator:after{
+    border-left: 20px solid transparent;
+    right: 0;
+}
+.down-arrow{
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.bounce {
+    animation: bounce 2s infinite;
+  }
+  
+  @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-30px);
+    }
+    60% {
+      transform: translateY(-15px);
+    }
+  }
+  .banner-bg-image:after{
+    height: 20px;
+    transform: translateY(0px);
+    background: #fff;
+    content: '';
+    display: block;
+  }

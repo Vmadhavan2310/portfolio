@@ -69,12 +69,14 @@ function Header() {
       if(imgSrc) imgSrc.src=sticky_logo_url;
       setTimeout(() => {
         header.current?.classList.add('visible');
+        header.current?.parentElement?.querySelector('.down-arrow')?.classList.remove('visible');
       }, 200);
     }else{
       header.current?.classList.remove('sticky');
       if(imgSrc) imgSrc.src=logo_image_url;
       setTimeout(() => {
         header.current?.classList.remove('visible');
+        header.current?.parentElement?.querySelector('.down-arrow')?.classList.add('visible');
       }, 200);
     }
   })
@@ -138,7 +140,7 @@ function Header() {
             </div>
           </section>
         </main>
-        <div className="down-arrow bounce">
+        <div className="down-arrow bounce visible">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25" height="25" width="25"><path d="M12.5 18 2 7.707 2.707 7l9.793 9.586L22.293 7l.707.707L12.5 18z" stroke='#fff'></path></svg>
         </div>
       </section>

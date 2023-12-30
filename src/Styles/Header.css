@@ -227,6 +227,13 @@ left: 0;
     justify-content: center;
     width: 100%;
 }
+.down-arrow svg{
+    transition: 500ms all;
+    transform: scale(0);
+}
+.down-arrow.visible svg{
+    transform: scale(1);
+}
 .bounce {
     animation: bounce 2s infinite;
   }
@@ -347,11 +354,13 @@ left: 0;
         height: 75vh;
         transition: all 0.3s ease-in-out;
         display: block;
+        opacity: 0;
       }
       body.open .mbl-nav-list{
        right: 0%;
        background: #1c1c1c;
        color: var(--text-clr);
+       opacity: 1;
       }
       
   }

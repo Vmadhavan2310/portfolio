@@ -249,3 +249,110 @@ left: 0;
     content: '';
     display: block;
   }
+
+  /* button Effect */
+  .contact{
+    box-shadow: 2px 2px 0 0;
+    transition: 0.3s;
+  }
+  .contact:hover{
+    box-shadow: -2px -2px 0 0;
+    transform: scale(0.9);
+    background: #cc9200;
+  }
+  .contact:after{
+    content: '';
+    background: linear-gradient(to right, #2193b0,#6dd5ed);
+  }
+
+  .mbl-nav-list{
+    display: none;
+  }
+  /* Responsive Styling */
+  @media screen and (max-width:990px){
+    html{
+        font-size: 8px;
+      }
+      .header-container{
+        justify-content: space-evenly;
+      }
+      .header-title{
+        justify-content: flex-start;
+      }
+      .header-container:not(.sticky){
+        padding: 3rem 0;
+      }
+      .header-title .logo-wrapper,.nav-wrapper li:not(.toggle-btn),.main-image-wrapper{
+        display: none;
+      }
+      .mblNav-toggle-btn span{
+        display: block;
+        margin: 5px 0;
+      }
+      .header-container:not(.sticky) .mblNav-toggle-btn span::after{
+        background-color: var(--text-clr);
+      }
+      .mblNav-toggle-btn span{
+        transition: all 0.3s ease-in-out;
+      }
+      .mblNav-toggle-btn span::after{
+        height: 0.4rem;
+        width: 3.1rem;
+        background-color: var(--text-primary-clr);
+        content: '';
+        display: block;
+      }
+      body.open .mblNav-toggle-btn span:nth-child(2){
+        opacity: 0;
+      }
+      body.open .mblNav-toggle-btn span:nth-child(1){
+        transform: translateY(8px) rotate(45deg);
+      } 
+      body.open .mblNav-toggle-btn span:nth-child(3){
+        transform: translateY(-8px) rotate(-45deg);
+      } 
+      .main-wrapper{
+        height: auto;
+        margin: 12rem 0rem;
+      }
+      .main-content-wrapper > *{
+        width: 100%;
+      }
+      .banner-para{
+        padding: 0;
+      }
+      .main-content-wrapper{
+        flex-basis: 85%;
+        justify-content:flex-start;
+      }
+      .banner-header{
+        font-size: 5rem;
+      }
+      .banner-btns{
+        margin-top: 5rem;
+      }
+      .banner-para,.banner-btns{
+        font-size: 2rem;
+      }
+      .mbl-nav-list{
+        position: fixed;
+        background-color: #fff;
+        top:12%;
+        right: 100%;
+        left: 0;
+        font-size: 2rem;
+        color: #454545;
+        line-height: 5;
+        text-align: center;
+        height: 75vh;
+        transition: all 0.3s ease-in-out;
+        display: block;
+      }
+      body.open .mbl-nav-list{
+       right: 0%;
+       background: #1c1c1c;
+       color: var(--text-clr);
+      }
+      
+  }
+ 

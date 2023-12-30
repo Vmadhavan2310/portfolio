@@ -78,6 +78,13 @@ function Header() {
       }, 200);
     }
   })
+
+  //toggle menu bar
+  const toggleMenu=(e:React.MouseEvent)=>{
+    const body=document.querySelector('body');
+    body?.classList.toggle('open');
+  }
+ 
   return (
     <section className='banner-wrapper'>
       <section className="banner-bg-image" ref={banner_img}>
@@ -95,12 +102,25 @@ function Header() {
             <li className="nav-items">Projects</li>
             <li className="nav-items">Contact</li>
             <li className="toggle-btn" onClick={() => setbgmode(mode => (!mode))} ref={toggleBtn}></li>
+          <div className='mblNav-toggle-btn' onClick={(e)=>toggleMenu(e)}>
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+          </nav>
+          {/* Mobile Navigation */}
+          <nav className='mbl-nav-list'>
+            <li className="nav-items">Home</li>
+            <li className="nav-items">About</li>
+            <li className="nav-items">Projects</li>
+            <li className="nav-items">Contact</li>
           </nav>
         </header>
         <main className="main-wrapper">
           <section className="main-content-wrapper" data-aos='fade-up' data-aos-duration="2000">
             <h3 className="banner-header">React JS Developer</h3>
             <p className="banner-para">
+              {/* <span className="typing-txt" ref={typing_txt}>A Passionate Web Developer, turning ideas into real life Products. Oppurtunities don't happen until we create them!!</span> */}
               <span className="typing-txt" ref={typing_txt}></span>
             </p>
             <section className="banner-btns">

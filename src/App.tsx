@@ -2,8 +2,8 @@ import React, { useEffect } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Header from './Components/Header';
-import About from './Components/About';
 import  Aos  from 'aos';
+import Expertise from './Components/Expertise';
 
 function App() {
   useEffect(()=>{
@@ -12,7 +12,7 @@ function App() {
   return (
     <>
     <Header/>
-    <About/>
+    <Expertise/>
     </>
   );
 }

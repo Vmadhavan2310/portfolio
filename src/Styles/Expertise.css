@@ -1,0 +1,142 @@
+:root{
+    --react:90%;
+    --js:87%;
+    --typeSc:80%;
+    --redux:82%;
+    --mui:75%;
+    --shopify:78%;
+}
+
+.expertise-wrapper{
+    margin: 4rem 0;
+}
+.expertise-container{
+    display: flex;
+    margin: 0 1.5rem;
+    column-gap: 1rem;
+}
+.expertise-content-wrapper, .expertise-skillset-wrapper{
+    flex-basis: 50%;
+}
+.expertise-content-wrapper,.expertise-skillset-heading{
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+.expertise-content-para{
+    padding:0 10rem;
+    margin: 2rem 0;
+    line-height: 2.2;
+    font-weight: 400;
+    text-align: justify;
+}
+.expertise-skillset-wrapper{
+    padding: 0 2rem;
+}
+.skillset-bar-wrapper{
+    margin:1rem 0;
+}
+.skillset-progressBar{
+    display: flex;
+}
+.skillset-progressBar:after,.skillset-progressBar:before{
+    content: '';
+    height: 10px;
+    display: block;
+}
+.skillset-progressBar:before{
+    background-color: var(--primary-clr);
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    transition: all 1000ms ease-in-out;
+    flex-basis: 0;
+}
+.skillset-progressBar:after{
+    flex-grow: 1;
+    background-color: var(--primary-clr);
+    opacity: 0.5;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.load .react-wrapper .skillset-progressBar:before{
+    flex-basis: var(--react);
+}
+.load .js-wrapper .skillset-progressBar:before{
+    flex-basis: var(--js);
+}
+.load .ts-wrapper .skillset-progressBar:before{
+    flex-basis: var(--typeSc);
+}
+.load .redux-wrapper .skillset-progressBar:before{
+    flex-basis: var(--redux);
+}
+.load .mui-wrapper .skillset-progressBar:before{
+    flex-basis: var(--mui);
+}
+.load .shopify-wrapper .skillset-progressBar:before{
+    flex-basis: var(--shopify);
+}
+.skillset-percentge{
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    transition: all 1000ms ease-in-out;
+    width: 5%;
+}
+.skillset-percentge:after{
+    position: absolute;
+    bottom: 0;
+    border: 1px solid #454545;
+    margin-bottom: 5px;
+    font-size: 0.7rem;
+    padding: 0.2rem;
+    right: -0.6%;
+}
+.skillset-percentge:before{
+    position: absolute;
+    border-color: #454545 transparent;
+    border-style: solid;
+    border-width: 5px 5px 0;
+    bottom: 0px;
+    content: "";
+    right: 1%;
+}
+.react-wrapper .skillset-percentge:after,
+.js-wrapper .skillset-percentge:after,
+.ts-wrapper .skillset-percentge:after,
+.redux-wrapper .skillset-percentge:after,
+.mui-wrapper .skillset-percentge:after,
+.shopify-wrapper .skillset-percentge:after{
+    content: attr(id); 
+}
+.load .react-wrapper .skillset-percentge{
+    width: 91.5%;
+}
+.load .js-wrapper .skillset-percentge{
+    width: 88.5%;
+}
+.load .ts-wrapper .skillset-percentge{
+    width: 81.5%;
+}
+.load .redux-wrapper .skillset-percentge{
+    width: 83.5%;
+}
+.load .mui-wrapper .skillset-percentge{
+    width: 76.5%;
+}
+.load .shopify-wrapper .skillset-percentge{
+    width: 79.5%;
+}
+
+/* Responsive */
+@media screen and (max-width:990px){
+    .expertise-container{
+        flex-wrap: wrap;
+    }
+    .expertise-content-wrapper,.expertise-skillset-wrapper{
+        flex-basis: 100%;
+    }
+    .expertise-content-para{
+        padding: 0 2rem;
+    }
+}

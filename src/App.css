@@ -6,8 +6,7 @@
 :root{
   --text-clr:#fff;
   --text-primary-clr:#454545;
-  --primary-clr: #88bdbc;
-  --secondary-clr: #254e58;
+  --primary-clr: #ffb805;
 
   /* --primary-font: 'Poppins', sans-serif; */
   /* --secondary-font: 'Raleway', sans-serif; */
@@ -30,4 +29,7 @@
 body{
   width: 100%;
 
+}
+body.no-scroll{
+  overflow: hidden;
 }

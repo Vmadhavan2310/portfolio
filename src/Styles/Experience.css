@@ -1,0 +1,49 @@
+.experience-section-wrapper{
+    background: url(../Asset/photo-1495106245177-55dc6f43e83f.avif);
+    object-fit: contain;
+    background-size: cover;
+    box-shadow: 0px 0px 4px 0px #00000040, inset 0 0 0 1000px rgba(0, 0, 0, 30%);
+    transition: 1s all;
+    /* background-attachment: fixed; */
+    position: relative;
+    margin-bottom: 2rem;
+ 
+}
+.experience-section-wrapper *{
+    color: var(--text-clr);
+}
+.experience-container{
+    padding:1.5rem 10rem;
+}
+.experience-container .heading{
+    font-size: 2rem;
+}
+.experience-container .heading span{
+    color: var(--primary-clr);
+}
+.experience-container .sub-heading{
+    font-size: 1rem;
+    margin-top: 0.5rem;
+    width: 70%;
+}
+.product-card-wrapper{
+    display: flex;
+    margin-top: 0.5rem;
+    column-gap: 1rem;
+}
+.product-card{
+    backdrop-filter: blur(3px);
+    padding: 3rem 1rem;
+    transition: 500ms all;
+}
+.product-card > *{
+    margin: 0.5rem;
+}
+.card-heading{
+    color: var(--primary-clr);
+}
+@media screen and (max-width:990px){
+    .experience-container{
+        padding:1.5rem 3rem;
+    }
+}

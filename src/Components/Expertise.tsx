@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
-import '../Styles/Expertise.css'
-function Expertise() {
+import '../Styles/Expertise.css';
+import { AOSProps } from './Header';
+function Expertise(props:AOSProps) {
 const expertiseContainer=React.useRef<HTMLElement>(null);
 
     useEffect(()=>{
@@ -17,7 +18,7 @@ const expertiseContainer=React.useRef<HTMLElement>(null);
     },[])
   return (
     <section className='expertise-wrapper' ref={expertiseContainer}>
-        <section className="expertise-container" data-aos='fade-up' data-aos-duration="2000">
+        <section className="expertise-container" data-aos='fade-up' data-aos-duration={props.AOS_timing}>
             <section className="expertise-content-wrapper">
                 <h4 className='expertise-content-heading'>Expertise</h4>
                 <p className='expertise-content-para'>Became an expert in web development having strong foundation in React, Javascript, and Typescript, as well as an understanding of software engineering principles and best

@@ -1,6 +1,9 @@
 import React, { useEffect, useRef, useState } from 'react'
 import '../Styles/Header.css'
-function Header() {
+export type AOSProps={
+  AOS_timing:number
+}
+function Header(props:AOSProps) {
   const [bgmode, setbgmode] = useState(false);
   const typing_txt = React.useRef<HTMLElement>(null); //Use ref for typing text Element access
   const header = React.useRef<HTMLElement | null>(null); //Use ref for Header Element access
@@ -121,7 +124,7 @@ function Header() {
             </nav>
           </header>
           <main className="main-wrapper">
-            <section className="main-content-wrapper" data-aos='fade-up' data-aos-duration="2000">
+            <section className="main-content-wrapper" data-aos='fade-up' data-aos-duration={props.AOS_timing}>
               <h3 className="banner-header">React JS Developer</h3>
               <p className="banner-para">
                 {/* <span className="typing-txt" ref={typing_txt}>A Passionate Web Developer, turning ideas into real life Products. Oppurtunities don't happen until we create them!!</span> */}

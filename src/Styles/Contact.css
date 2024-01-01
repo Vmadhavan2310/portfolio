@@ -1,0 +1,98 @@
+.contact-section-wrapper{
+    height: 60vh;
+}
+.contact-container{
+    padding:1.5rem 10rem;
+}
+.contact-heading{
+    font-size: 1.5rem;
+    font-weight: 800;
+    text-align: center;
+}
+.contact-heading-wrapper{
+    padding:1.5rem 10rem;
+}
+.contact-heading-wrapper > *{
+    margin:0.5rem;
+}
+.address-form-wrapper{
+    display: flex;
+}
+
+.address-wrapper{
+    flex-basis: 50%;
+    line-height: 3;
+}
+.address-wrapper .title{
+    color: var(--primary-clr);
+}
+.form-wrapper{
+    flex-basis: 50%;
+}
+.form-wrapper form{
+    display: flex;
+    flex-direction: column;
+}
+.form-wrapper form > *{
+    margin:0.5rem;
+}
+.form-wrapper input, .form-wrapper textarea{
+    border: 1px solid #454545;
+    border-radius: 5px;
+}
+.form-wrapper #name{
+    width: 80%;
+    padding: 0.5rem;
+}
+.form-wrapper #message, .form-wrapper #email{
+    padding: 0.5rem;
+}
+.form-btn,.btn button{
+    width: 20%;
+    background: #ffb805;
+    padding: 0.5rem 1.5rem;
+    border-radius: 10px;
+}
+.pop-up-section-wrapper{
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    background: var(--text-clr);
+    z-index: 9;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    visibility: hidden;
+}
+.pop-up-section-wrapper.visible{
+    visibility: visible;
+}
+.pop-up-container {
+    position: relative;
+    transform: scale(0);
+    transition: all 500ms ease-in-out;
+}
+.pop-up-container.visible{
+    transform: scale(1);
+}
+.icon{
+    height: 100px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.btn{
+    display: flex;
+    justify-content: center;
+    margin:1rem 0;
+}
+.pop-up-content-wrapper{
+    padding: 4rem 2rem;
+    line-height: 3;
+ 
+}
+.pop-up-container .heading{
+    font-size: 1.5rem;
+    text-align: center;
+}

@@ -82,6 +82,9 @@
     left: 50%;
     transform: translate(-50%, -50%);
 }
+.icon img{
+    height: 100%;
+}
 .btn{
     display: flex;
     justify-content: center;
@@ -95,4 +98,30 @@
 .pop-up-container .heading{
     font-size: 1.5rem;
     text-align: center;
+}
+
+@media screen and (max-width:990px){
+    .contact-container{
+        padding: 1.5rem 4rem;
+    }
+    .contact-heading-wrapper{
+        padding: 1.5rem 0;
+    }
+    .address-form-wrapper{
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+    }
+    .address-wrapper{
+        padding: 0 1rem;
+    }
+    .form-wrapper,.address-wrapper{
+        flex-basis: 100%;
+    }
+    .icon{
+        height: 50px;
+    }
+    .pop-up-section-wrapper{
+        width: 70%;
+        text-align: center;
+    }
 }

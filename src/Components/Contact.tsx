@@ -39,6 +39,13 @@ function Contact(props:AOSProps) {
         setError(error.message ? error.message : error);
       });
     }
+
+    const closePopup=()=>{
+        setPopup(false);
+        setName('');
+        setEmail('');
+        setMessage('');
+    }
   return (
     <>
     <div className={showPopUp? 'visible pop-up-section-wrapper' : 'pop-up-section-wrapper'}>
@@ -51,7 +58,7 @@ function Contact(props:AOSProps) {
                 <p className="msg">Your details has been successfully submitted</p>
             </div>
             <div className="btn">
-                <button onClick={()=>setPopup(false)}>Close</button>
+                <button onClick={closePopup}>Close</button>
             </div>
             </div>
         </div>

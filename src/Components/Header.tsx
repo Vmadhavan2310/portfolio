@@ -5,11 +5,12 @@ export type AOSProps={
 }
 function Header(props:AOSProps) {
   const [bgmode, setbgmode] = useState(false);
-  const typing_txt = React.useRef<HTMLElement>(null); //Use ref for typing text Element access
+  const typing_txt = React.useRef<HTMLHeadingElement>(null); //Use ref for typing text Element access
   const header = React.useRef<HTMLElement | null>(null); //Use ref for Header Element access
   const logo_image_url = 'https://ik.imagekit.io/hs4gfzmpd/vm-high-resolution-logo-transparent%20(1).png?updatedAt=1703513209656';
   const sticky_logo_url = 'https://ik.imagekit.io/hs4gfzmpd/vm-high-resolution-logo-black-transparent.png?updatedAt=1703513209656';
   let str = `A Passionate Web Developer, turning ideas into real life Products. I thrive on the intricate dance between logic and creativity.`;
+  // let str = 'A React JS Developer';
 
   function type_text(mode: string, duration: number) {
     let i = 0;
@@ -93,7 +94,7 @@ function Header(props:AOSProps) {
   }
 
   return (
-    <section className='banner-wrapper'>
+    <section className='banner-wrapper' id='Home'>
       <section className="banner-bg-image" ref={banner_img}>
         <section className='banner-bg-tile'>
           <header className='header-container' ref={header}>
@@ -104,10 +105,18 @@ function Header(props:AOSProps) {
               </span>
             </section>
             <nav className='nav-wrapper'>
-              <li className="nav-items">Home</li>
-              <li className="nav-items">About</li>
-              <li className="nav-items">Projects</li>
-              <li className="nav-items">Contact</li>
+              <li className="nav-items">
+                <a href="#Home">Home</a>
+              </li>
+              <li className="nav-items">
+                <a href="#Expertise">Expertise</a>
+              </li>
+              <li className="nav-items">
+                <a href="#Experience">Experience</a>
+              </li>
+              <li className="nav-items">
+                <a href="#Contact">Contact</a>
+              </li>
               <li className="toggle-btn" onClick={() => setbgmode(mode => (!mode))} ref={toggleBtn}></li>
               <div className='mblNav-toggle-btn' onClick={(e) => toggleMenu(e)}>
                 <span></span>
@@ -124,13 +133,13 @@ function Header(props:AOSProps) {
             </nav>
           </header>
           <main className="main-wrapper">
-            <section className="main-content-wrapper" data-aos='fade-up' data-aos-duration={props.AOS_timing}>
-              <h3 className="banner-header">React JS Developer</h3>
+            <section className="main-content-wrapper" data-aos='fade-right' data-aos-duration={props.AOS_timing}>
+              <h4 className='first-heading'>Hi, Its me</h4>
+              <h3 className="banner-header"> A React JS Developer</h3>
               <p className="banner-para">
-                {/* <span className="typing-txt" ref={typing_txt}>A Passionate Web Developer, turning ideas into real life Products. Oppurtunities don't happen until we create them!!</span> */}
-                <span className="typing-txt" ref={typing_txt}></span>
+                <span className="typing-txt"  ref={typing_txt}></span>
               </p>
-              <section className="banner-btns">
+              <section className="banner-btns" data-aos='fade-up' data-aos-duration={props.AOS_timing}>
                 <button className="hire-me">Hire Me</button>
                 <button className="contact">Contact </button>
               </section>

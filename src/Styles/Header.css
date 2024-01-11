@@ -104,6 +104,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  line-height: 2;
 }
 
 .main-image-wrapper {
@@ -134,32 +135,37 @@
   font-family: var(--secondary-font);
   text-transform: uppercase;
   color: var(--primary-clr);
+  margin-left: 1.5rem;
 }
 
 .banner-para {
   font-family: var(--primary-font);
   min-height: 17vh;
 }
-
+.first-heading{
+  width: 59%;
+}
 .banner-para {
   width: 60%;
   margin: 1.5rem 0;
-  padding: 0 1.5rem;
-}
-
-.typing-txt {
+  /* padding: 0 1.5rem; */
   text-transform: capitalize;
   line-height: 1.8;
 }
 
-.typing-txt::after {
+/* .typing-txt {
+  text-transform: capitalize;
+  line-height: 1.8;
+} */
+
+/* .typing-txt::after {
   content: '';
   position: relative;
   top: 5%;
   font-weight: 900;
   border-right: 4px solid #ffb805;
   padding: 4px 2px;
-}
+} */
 
 .banner-btns {
   display: flex;

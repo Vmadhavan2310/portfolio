@@ -17,7 +17,7 @@ const expertiseContainer=React.useRef<HTMLElement>(null);
             if(expertiseContainer?.current) interSecObser.observe(expertiseContainer?.current);
     },[])
   return (
-    <section className='expertise-wrapper' ref={expertiseContainer}>
+    <section className='expertise-wrapper' ref={expertiseContainer} id='Expertise'>
         <section className="expertise-container" data-aos='fade-up' data-aos-duration={props.AOS_timing}>
             <section className="expertise-content-wrapper">
                 <h4 className='expertise-content-heading'>Expertise</h4>

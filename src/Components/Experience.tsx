@@ -3,7 +3,7 @@ import '../Styles/Experience.css';
 import { AOSProps } from './Header';
 function Experience(props:AOSProps) {
   return (
-    <section className="experience-section-wrapper">
+    <section className="experience-section-wrapper" id='Experience'>
     <section className='banner-bg-tile'>
         <div className="experience-container" data-aos='fade-up' data-aos-duration={props.AOS_timing}>
             <h3 className='heading'>My <span>Experience</span></h3>

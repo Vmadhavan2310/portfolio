@@ -63,7 +63,7 @@ function Contact(props:AOSProps) {
             </div>
         </div>
     
-    <section className="contact-section-wrapper">
+    <section className="contact-section-wrapper" id='Contact'>
         <section className="contact-container" data-aos='fade-up' data-aos-duration={props.AOS_timing}>
             <div className="contact-heading-wrapper">
             <h3 className="contact-heading">Contact Me</h3>

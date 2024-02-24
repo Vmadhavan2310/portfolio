@@ -36,7 +36,7 @@ function Header(props:AOSProps) {
   }
 
   useEffect(() => {
-    type_text('writing', 100)
+    type_text('writing', 50)
   }, [])
 
   //toggle Mode

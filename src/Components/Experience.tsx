@@ -1,11 +1,11 @@
 import React from 'react'
 import '../Styles/Experience.css';
-import { AOSProps } from './Header';
-function Experience(props:AOSProps) {
+
+function Experience() {
   return (
     <section className="experience-section-wrapper" id='Experience'>
     <section className='banner-bg-tile'>
-        <div className="experience-container" data-aos='fade-up' data-aos-duration={props.AOS_timing}>
+        <div className="experience-container">
             <h3 className='heading'>My <span>Experience</span></h3>
             <h4 className='sub-heading'>There are many variations of passages ofLorem Ipsum
 available, but the majority havesuffered alteration in some form, by injected humour</h4>

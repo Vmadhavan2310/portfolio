@@ -251,7 +251,7 @@
   bottom: 100%;
   z-index: 199;
   height: 0;
-  width: 50%;
+  width: 49%;
   border-bottom: 25px solid;
 }
 
@@ -337,7 +337,7 @@
 /* Responsive Styling */
 @media screen and (max-width:990px) {
   html {
-    font-size: 8px;
+    font-size: 12px;
   }
 
   .header-container {

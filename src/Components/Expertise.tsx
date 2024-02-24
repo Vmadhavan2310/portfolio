@@ -11,7 +11,11 @@ const expertiseContainer=React.useRef<HTMLElement>(null);
             //Intersection Observer
             const interSecObser=new IntersectionObserver((entries)=>{
                 entries.forEach(section=>{
-                    if(section.isIntersecting && expertiseContainer?.current) expertiseContainer.current?.classList.add('load');
+                    if(section.isIntersecting && expertiseContainer?.current) {
+                        expertiseContainer.current?.classList.add('load');
+                    }else{
+                        expertiseContainer.current?.classList.remove('load');
+                    }
                 })
             },options)
             if(expertiseContainer?.current) interSecObser.observe(expertiseContainer?.current);
